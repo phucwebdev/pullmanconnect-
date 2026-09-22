@@ -1,0 +1,1144 @@
+/* ==========================================================================
+   PULLMAN CONNECT - BEE LOGISTICS REPLICA DESIGN SYSTEM
+   4 Pillar Core Logistics Architecture (No News, No Video)
+   ========================================================================== */
+
+:root {
+  /* Ocean Blue (#003366 & #1A4B84) */
+  --bee-blue-dark: #002244;
+  --bee-blue-primary: #003366;
+  --bee-blue-medium: #1A4B84;
+  --bee-blue-light: #2A64A8;
+  --bee-blue-soft: #EBF3FC;
+
+  /* Orange-Yellow (#FFB300 & #F7941D) */
+  --bee-orange-primary: #F7941D;
+  --bee-orange-light: #FFB300;
+  --bee-orange-dark: #E67E00;
+  --bee-orange-bg: #FFF7E6;
+  --bee-orange-gradient: linear-gradient(135deg, #FFB300 0%, #F7941D 100%);
+
+  /* Crisp White (#FFFFFF) & Neutrals */
+  --bee-white: #FFFFFF;
+  --bee-bg-light: #F8FAFC;
+  --bee-border: #E2E8F0;
+  --bee-text-dark: #002244;
+  --bee-text-body: #334155;
+  --bee-text-muted: #64748B;
+
+  --font-main: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Montserrat', 'Be Vietnam Pro', sans-serif;
+  --font-condensed: 'Montserrat', 'Be Vietnam Pro', sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+
+  --shadow-sm: 0 2px 8px rgba(0, 51, 102, 0.08);
+  --shadow-md: 0 8px 24px -4px rgba(0, 51, 102, 0.12);
+  --shadow-lg: 0 16px 36px -6px rgba(0, 51, 102, 0.2);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bee-white);
+  color: var(--bee-text-body);
+  line-height: 1.6;
+  font-size: 15px;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+a:hover {
+  color: var(--bee-orange-primary);
+}
+
+/* Accessibility & SEO utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ==========================================================================
+   1. TOP HEADER (Bee Logistics Header with Logo & Hotline Banner)
+   ========================================================================== */
+.bee-top-header {
+  background: #ffffff;
+  padding: 16px 0 14px;
+  border-bottom: 1px solid #eef2f6;
+}
+
+.bee-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bee-logo-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bee-official-logo-img {
+  height: 68px;
+  width: auto;
+  max-width: 290px;
+  object-fit: contain;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transition: transform 0.25s ease;
+}
+
+.bee-logo-brand:hover .bee-official-logo-img {
+  transform: scale(1.03);
+}
+
+.bee-footer-logo-img {
+  height: 56px;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
+  display: block;
+}
+
+.bee-logo-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: var(--bee-blue-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bee-orange-primary);
+  box-shadow: 0 4px 10px rgba(0, 51, 102, 0.25);
+}
+
+.bee-logo-badge svg {
+  width: 28px;
+  height: 28px;
+}
+
+.bee-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.bee-logo-title {
+  font-family: var(--font-condensed);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--bee-blue-primary);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.bee-logo-title span {
+  color: var(--bee-orange-primary);
+}
+
+.bee-logo-subtitle {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--bee-blue-medium);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.bee-top-tools {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.bee-hotline-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bee-orange-bg);
+  border: 1.5px solid rgba(247, 148, 29, 0.3);
+  padding: 6px 14px;
+  border-radius: 6px;
+  color: var(--bee-blue-primary);
+  font-weight: 700;
+  font-size: 0.88rem;
+  animation: beePulse 2s infinite ease-in-out;
+}
+
+@keyframes beePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.bee-social-strip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bee-social-strip a {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bee-blue-primary);
+  font-size: 0.9rem;
+}
+
+.bee-social-strip a:hover {
+  background: var(--bee-orange-primary);
+  color: #ffffff;
+}
+
+.bee-lang-menu-box {
+  position: relative;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: #f8fafc;
+  border: 1px solid var(--bee-border);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--bee-blue-primary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bee-lang-dropdown-list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 150px;
+  background: #ffffff;
+  border: 1px solid var(--bee-border);
+  border-radius: 4px;
+  box-shadow: var(--shadow-lg);
+  padding: 4px 0;
+  margin-top: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: all 0.2s ease;
+  z-index: 2000;
+}
+
+.bee-lang-menu-box:hover .bee-lang-dropdown-list,
+.bee-lang-menu-box.active .bee-lang-dropdown-list {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.bee-lang-item a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  font-size: 0.82rem;
+  color: var(--bee-text-body);
+}
+
+.bee-lang-item a:hover {
+  background: var(--bee-blue-soft);
+  color: var(--bee-blue-primary);
+}
+
+/* ==========================================================================
+   2. NAVBAR (Bee Logistics Style Grey-White Bar with Core Service Dropdown)
+   ========================================================================== */
+.bee-navbar {
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  border-bottom: 2px solid var(--bee-orange-primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.bee-nav-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.bee-nav-item {
+  position: relative;
+}
+
+.bee-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 14px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+}
+
+.bee-nav-link:hover, .bee-nav-item.active .bee-nav-link {
+  color: var(--bee-orange-primary);
+  background: rgba(247, 148, 29, 0.08);
+}
+
+.bee-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 290px;
+  background: #ffffff;
+  border-top: 3px solid var(--bee-orange-primary);
+  box-shadow: var(--shadow-lg);
+  padding: 6px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.25s ease;
+  z-index: 1500;
+}
+
+.bee-nav-item:hover .bee-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.bee-dropdown-link {
+  display: block;
+  padding: 8px 16px;
+  font-size: 0.84rem;
+  color: #444444;
+  border-bottom: 1px dashed #f0f0f0;
+  transition: all 0.2s ease;
+}
+
+.bee-dropdown-link:hover {
+  background: var(--bee-blue-soft);
+  color: var(--bee-blue-primary);
+  padding-left: 20px;
+}
+
+.bee-quote-nav-btn {
+  margin-left: auto;
+  background: var(--bee-orange-gradient);
+  color: #ffffff !important;
+  font-weight: 800;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(247, 148, 29, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bee-quote-nav-btn:hover {
+  background: linear-gradient(135deg, #e67e00 0%, #d35400 100%);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   3. HERO SLIDER BANNER (LƯỚT SLIDE ĐỘNG CHUẨN BEE LOGISTICS)
+   ========================================================================== */
+.bee-slider-viewport {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  height: 60vh;
+  max-height: 560px;
+  overflow: hidden;
+  background: #73c2ea;
+  border-bottom: 8px solid #cfbea2;
+  user-select: none;
+}
+
+.bee-slider-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.bee-slide-item {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bee-slide-item.slide-sea { background: #76c7e8; }
+.bee-slide-item.slide-air { background: #62aee0; }
+.bee-slide-item.slide-road { background: #4a9ad6; }
+.bee-slide-item.slide-supply { background: linear-gradient(135deg, #1e5f99 0%, #2f7dbf 100%); }
+
+.bee-slide-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+.bee-slide-left {
+  color: #ffffff;
+  padding-right: 20px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.4, 1) 0.15s, opacity 0.6s ease 0.15s;
+}
+
+.bee-slide-item.active .bee-slide-left {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.bee-slide-heading {
+  font-family: var(--font-condensed);
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1.05;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 12px rgba(0, 51, 102, 0.18);
+}
+
+.bee-slide-subheading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+.bee-slide-btn-group {
+  display: flex;
+  gap: 12px;
+}
+
+.bee-slide-right {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  transform: translateX(40px);
+  opacity: 0;
+  transition: transform 0.75s cubic-bezier(0.2, 0.8, 0.4, 1) 0.2s, opacity 0.75s ease 0.2s;
+}
+
+.bee-slide-item.active .bee-slide-right {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.bee-slide-vehicle-img {
+  max-height: 94%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 30px rgba(0, 34, 68, 0.25));
+  animation: vehicleFloat 4s ease-in-out infinite;
+}
+
+@keyframes vehicleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.bee-slider-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  font-size: 1.4rem;
+  font-weight: 800;
+  backdrop-filter: blur(4px);
+  transition: all 0.25s ease;
+}
+
+.bee-slider-nav-btn:hover {
+  background: var(--bee-orange-primary);
+  border-color: var(--bee-orange-primary);
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 15px rgba(247, 148, 29, 0.4);
+}
+
+.bee-slider-prev { left: 20px; }
+.bee-slider-next { right: 20px; }
+
+.bee-slider-dots-box {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 20;
+}
+
+.bee-slider-dot {
+  width: 26px;
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bee-slider-dot.active {
+  width: 44px;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* ==========================================================================
+   4. SECTION 5 NGĂN DỊCH VỤ CỐT LÕI (5 CORE PILLARS ARCHITECTURE)
+   ========================================================================== */
+.pillars-main-section {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.pillars-header-block {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.pillar-badge-title {
+  display: inline-block;
+  background: var(--bee-orange-bg);
+  border: 1px solid rgba(247, 148, 29, 0.4);
+  color: var(--bee-orange-primary);
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.pillars-main-title {
+  font-family: var(--font-condensed);
+  font-size: clamp(2.2rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  color: var(--bee-blue-primary);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.pillars-main-title span {
+  color: var(--bee-orange-primary);
+}
+
+.pillars-desc {
+  font-size: 0.95rem;
+  color: var(--bee-text-muted);
+}
+
+/* Cấu trúc 4 Khối Dịch Vụ Lớn */
+.pillars-grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.pillar-row-card {
+  background: #ffffff;
+  border: 1.5px solid var(--bee-border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pillar-row-card:hover {
+  border-color: var(--bee-orange-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.pillar-row-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--bee-orange-gradient);
+}
+
+.pillar-card-header {
+  background: var(--bee-blue-soft);
+  padding: 16px 24px 16px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--bee-border);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pillar-number-badge {
+  font-family: var(--font-mono);
+  font-weight: 900;
+  font-size: 0.82rem;
+  background: var(--bee-blue-primary);
+  color: #ffffff;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.pillar-card-title {
+  font-family: var(--font-condensed);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--bee-blue-primary);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.pillar-card-desc {
+  font-size: 0.88rem;
+  color: var(--bee-text-muted);
+  font-style: italic;
+}
+
+.pillar-card-body {
+  padding: 24px 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.sub-service-box {
+  background: #fcfdfe;
+  border: 1px solid #edf2f7;
+  border-radius: 6px;
+  padding: 18px 16px;
+  transition: all 0.25s ease;
+}
+
+.sub-service-box:hover {
+  background: #ffffff;
+  border-color: var(--bee-blue-medium);
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.08);
+}
+
+.sub-service-title {
+  font-family: var(--font-condensed);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--bee-blue-primary);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1.5px solid var(--bee-orange-primary);
+}
+
+.sub-service-title span.icon {
+  font-size: 1.2rem;
+}
+
+.sub-service-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sub-service-item {
+  font-size: 0.85rem;
+  color: var(--bee-text-body);
+  line-height: 1.45;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.sub-service-item span.bullet {
+  color: var(--bee-orange-primary);
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* Form Input Utilities */
+
+.tracking-strip-select {
+  background: #ffffff;
+  color: var(--bee-text-dark);
+  font-weight: 600;
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 0.86rem;
+  border: none;
+  min-width: 220px;
+}
+
+.tracking-strip-input {
+  flex: 1;
+  min-width: 200px;
+  background: #ffffff;
+  color: var(--bee-text-dark);
+  font-weight: 700;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: var(--font-mono);
+  border: none;
+}
+
+.btn-bee-orange-track {
+  background: var(--bee-orange-gradient);
+  color: #ffffff;
+  font-weight: 800;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(247, 148, 29, 0.4);
+}
+
+.btn-bee-orange-track:hover {
+  background: linear-gradient(135deg, #e67e00 0%, #d35400 100%);
+}
+
+/* ==========================================================================
+   5. BANNER SỐ LIỆU & QUY MÔ (Parallax Background)
+   ========================================================================== */
+.bee-stats-parallax-banner {
+  background-color: var(--bee-blue-primary);
+  background-image: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 51, 102, 0.9)), url('../assets/images/about-seaport.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 8px solid #cfbea2;
+  padding: 45px 0;
+  color: #ffffff;
+}
+
+.bee-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.bee-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bee-stat-icon-wrap {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: var(--bee-orange-light);
+}
+
+.bee-stat-number {
+  font-family: var(--font-condensed);
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.bee-stat-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--bee-orange-primary);
+  margin: 10px 0;
+}
+
+.bee-stat-caption {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #e2e8f0;
+}
+
+/* ==========================================================================
+   6. DẢI LOGO ĐỐI TÁC HÃNG BAY & HÃNG TÀU (Brands Slider)
+   ========================================================================== */
+.bee-brands-section {
+  padding: 30px 0;
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.bee-brands-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.bee-brand-pill {
+  font-family: var(--font-condensed);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--bee-blue-primary);
+  background: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid var(--bee-border);
+  border-radius: 4px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bee-brand-pill:hover {
+  border-color: var(--bee-orange-primary);
+  color: var(--bee-orange-primary);
+}
+
+/* ==========================================================================
+   7. FOOTER (Exact Bee Logistics Style)
+   ========================================================================== */
+.bee-site-footer {
+  background: var(--bee-blue-primary);
+  color: #ffffff;
+  padding: 40px 0 25px;
+  border-top: 4px solid var(--bee-orange-primary);
+  font-size: 0.88rem;
+}
+
+.bee-footer-row {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.bee-footer-info p {
+  color: #e2e8f0;
+  margin-bottom: 12px;
+}
+
+.bee-footer-info strong {
+  color: #ffffff;
+}
+
+.bee-footer-badges {
+  text-align: right;
+}
+
+.bee-moit-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--bee-orange-light);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   8. MODALS & FLOATING WIDGET
+   ========================================================================== */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 34, 68, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 3000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.modal-backdrop.active {
+  display: flex;
+}
+
+.modal-container {
+  background: #ffffff;
+  border-radius: 8px;
+  max-width: 640px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: var(--bee-blue-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.modal-close-btn:hover {
+  background: var(--bee-orange-primary);
+  color: #ffffff;
+}
+
+/* Floating Contact Buttons */
+.floating-contact-widget {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 2500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.floating-contact-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.floating-contact-widget.active .floating-contact-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.floating-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid var(--bee-border);
+  padding: 8px 16px 8px 10px;
+  border-radius: 30px;
+  color: var(--bee-blue-primary);
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+}
+
+.floating-item:hover {
+  border-color: var(--bee-orange-primary);
+  transform: translateX(-4px);
+}
+
+.floating-icon-bubble {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.floating-item.zalo .floating-icon-bubble { background: #0068ff; }
+.floating-item.hotline .floating-icon-bubble { background: var(--bee-orange-primary); }
+.floating-item.whatsapp .floating-icon-bubble { background: #25d366; }
+
+.floating-main-trigger {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--bee-orange-gradient);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(247, 148, 29, 0.45);
+  border: 2px solid #ffffff;
+  cursor: pointer;
+}
+
+.floating-contact-widget.active .floating-main-trigger {
+  background: var(--bee-blue-primary);
+}
+
+/* Toast Alerts */
+.toast-container {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 3500;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  background: var(--bee-blue-primary);
+  border: 1px solid var(--bee-orange-primary);
+  border-radius: 6px;
+  padding: 12px 18px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--shadow-lg);
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   FORM & MODAL INPUT ENHANCEMENTS (PULLMAN CONNECT THEME)
+   ========================================================================== */
+#formalQuoteForm input.tracking-strip-input,
+#formalQuoteForm select.tracking-strip-select,
+#formalQuoteForm textarea.tracking-strip-input {
+  width: 100%;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 6px;
+  color: var(--bee-blue-dark);
+  font-size: 0.92rem;
+  font-family: inherit;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+#formalQuoteForm input.tracking-strip-input:focus,
+#formalQuoteForm select.tracking-strip-select:focus,
+#formalQuoteForm textarea.tracking-strip-input:focus {
+  border-color: var(--bee-orange-primary);
+  box-shadow: 0 0 0 3px rgba(247, 148, 29, 0.18);
+  background: #ffffff;
+}
+
+#formalQuoteForm input:required:invalid:focus,
+#formalQuoteForm textarea:required:invalid:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+#formalQuoteForm button[type="submit"]:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .bee-slide-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 40px;
+  }
+  .bee-slide-left { padding-right: 0; }
+  .bee-slide-right { height: 240px; }
+  .bee-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .bee-footer-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .bee-slider-viewport { height: auto; min-height: 440px; }
+  .bee-nav-list { display: none; }
+  .bee-stats-grid { grid-template-columns: 1fr; }
+  .pillar-card-header { flex-direction: column; align-items: flex-start; }
+}

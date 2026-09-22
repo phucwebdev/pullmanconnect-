@@ -1,0 +1,10 @@
+# Robots.txt for Pullman Connect Corp
+# Website: https://pullmanconnect.com
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*?fbclid=*
+
+# Sitemap location
+Sitemap: https://pullmanconnect.com/sitemap.xml

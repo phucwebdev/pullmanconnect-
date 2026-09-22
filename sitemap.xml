@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://pullmanconnect.com/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://pullmanconnect.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pullmanconnect.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pullmanconnect.com/"/>
+    <image:image>
+      <image:loc>https://pullmanconnect.com/assets/images/pullman-logo.png</image:loc>
+      <image:title>Pullman Connect Corp Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pullmanconnect.com/assets/images/slider-sea.png</image:loc>
+      <image:title>Dịch Vụ Vận Tải Biển Pullman Connect</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pullmanconnect.com/assets/images/slider-air.png</image:loc>
+      <image:title>Dịch Vụ Vận Tải Hàng Không Quốc Tế</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pullmanconnect.com/assets/images/hero-panther.png</image:loc>
+      <image:title>Vận Tải Đường Bộ &amp; Đa Phương Thức</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pullmanconnect.com/assets/images/slider-supply.png</image:loc>
+      <image:title>Cung Ứng Vật Tư &amp; Thiết Bị Công Nghiệp</image:title>
+    </image:image>
+  </url>
+</urlset>
