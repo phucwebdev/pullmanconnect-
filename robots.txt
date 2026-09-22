@@ -1,5 +1,5 @@
 # Robots.txt for Pullman Connect Corp
-# Website: https://pullmanconnect.com
+# Website: https://www.pullmanconnect.com
 
 User-agent: *
 Allow: /
@@ -7,4 +7,4 @@ Disallow: /api/
 Disallow: /*?fbclid=*
 
 # Sitemap location
-Sitemap: https://pullmanconnect.com/sitemap.xml
+Sitemap: https://www.pullmanconnect.com/sitemap.xml
