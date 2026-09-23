@@ -19,12 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
 const LOGISTICS_CONFIG = {
   receiverEmail: 'Bel@pullmanconnect.com', // ✉️ Email tiếp nhận thông báo đơn hàng của chuyên viên/doanh nghiệp
   cuongEmail: 'admin@pullmanconnect.onmicrosoft.com', // ✉️ Email chuyên viên Mr Cường
-  contactPhone: '0916712502',                  // 📞 Số hotline công ty
-  contactName: 'Mr Cường',                     // 👤 Chuyên viên phụ trách liên hệ
-  hotline: '0916712502 - 0942512234 (Mr Cường)', // 📞 Số Hotline hiển thị trên web
+  contactLinh: '0916712502 (Ms Linh)',         // 📞 Chuyên viên Ms Linh
+  contactCuong: '0942512234 (Mr Cường)',       // 👤 Chuyên viên Mr Cường
+  hotline: '0916712502 (Ms Linh) - 0942512234 (Mr Cường)', // 📞 Số Hotline hiển thị trên web
   hotlineCall: '0916712502',                 // 📞 Số điện thoại khi khách bấm gọi trực tiếp
   cuongHotlineCall: '0942512234',            // 📞 Số điện thoại Mr Cường
-  zaloUrl: 'https://zalo.me/0942512234',     // 💬 Link Zalo Official / Zalo cá nhân chuyên viên
+  zaloUrl: 'https://zalo.me/0942512234',     // 💬 Link Zalo Mr Cường
+  zaloLinhUrl: 'https://zalo.me/0916712502', // 💬 Link Zalo Ms Linh
   whatsappUrl: 'https://wa.me/84942512234'   // 💬 Link WhatsApp quốc tế
 };
 
