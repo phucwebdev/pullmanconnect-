@@ -1039,6 +1039,7 @@ img {
 .floating-item.zalo .floating-icon-bubble { background: #0068ff; }
 .floating-item.hotline .floating-icon-bubble { background: var(--bee-orange-primary); }
 .floating-item.whatsapp .floating-icon-bubble { background: #25d366; }
+.floating-item.email .floating-icon-bubble { background: #0284c7; }
 
 .floating-main-trigger {
   width: 54px;

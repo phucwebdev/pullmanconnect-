@@ -17,10 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
    👉 Khi bàn giao cho khách, bạn chỉ cần thay đổi các thông tin dưới đây:
    ========================================================================== */
 const LOGISTICS_CONFIG = {
-  receiverEmail: 'pullmanconnect35@gmail.com', // ✉️ Email tiếp nhận thông báo đơn hàng của chuyên viên/doanh nghiệp
+  receiverEmail: 'Bel@pullmanconnect.com', // ✉️ Email tiếp nhận thông báo đơn hàng của chuyên viên/doanh nghiệp
+  cuongEmail: 'admin@pullmanconnect.onmicrosoft.com', // ✉️ Email chuyên viên Mr Cường
+  contactPhone: '0916712502',                  // 📞 Số hotline công ty
   contactName: 'Mr Cường',                     // 👤 Chuyên viên phụ trách liên hệ
-  hotline: '0942512234 (Mr Cường)',            // 📞 Số Hotline hiển thị trên web
-  hotlineCall: '0942512234',                 // 📞 Số điện thoại khi khách bấm gọi trực tiếp
+  hotline: '0916712502 - 0942512234 (Mr Cường)', // 📞 Số Hotline hiển thị trên web
+  hotlineCall: '0916712502',                 // 📞 Số điện thoại khi khách bấm gọi trực tiếp
+  cuongHotlineCall: '0942512234',            // 📞 Số điện thoại Mr Cường
   zaloUrl: 'https://zalo.me/0942512234',     // 💬 Link Zalo Official / Zalo cá nhân chuyên viên
   whatsappUrl: 'https://wa.me/84942512234'   // 💬 Link WhatsApp quốc tế
 };
@@ -342,7 +345,7 @@ function initContactForms() {
 
     // 3. Prepare Payload
     const randomReqCode = 'PC-REQ-' + Math.floor(1000 + Math.random() * 9000);
-    const targetEmail = LOGISTICS_CONFIG.receiverEmail || 'pullmanconnect35@gmail.com';
+    const targetEmail = LOGISTICS_CONFIG.receiverEmail || 'Bel@pullmanconnect.com';
     const submitTime = new Date().toLocaleString('vi-VN');
 
     const emailPayload = {
