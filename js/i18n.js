@@ -10,7 +10,9 @@ const I18N_DICTIONARY = {
   vi: {
     label: 'Tiếng Việt',
     // Header & Nav
-    hotline: 'HOTLINE: 0916712502 (Ms Linh) - 0942512234 (Mr Cường)',
+    hotline: 'Ms Linh: 0916712502 | Mr Cường: 0942512234',
+    hotlineLinh: 'Ms Linh: <a href="tel:0916712502">0916712502</a> - <a href="mailto:Bel@pullmanconnect.com">Bel@pullmanconnect.com</a>',
+    hotlineCuong: 'Mr Cường: <a href="tel:0942512234">0942512234</a> - <a href="mailto:admin@pullmanconnect.onmicrosoft.com">admin@pullmanconnect.onmicrosoft.com</a>',
     navHome: '🏠 TRANG CHỦ',
     navAbout: 'VỀ CHÚNG TÔI ▾',
     navAboutIntro: 'Giới Thiệu Về Pullman Connect',
@@ -162,17 +164,23 @@ const I18N_DICTIONARY = {
     // Footer
     footerCopyright: 'Bản quyền © 2026 <strong>PULLMAN CONNECT CORPORATION.</strong> Bảo lưu toàn bộ quyền.',
     footerHeadOffice: '🏠 <strong>TRỤ SỞ CHÍNH (HEAD OFFICE)</strong>: 152 Nguyễn Văn Đậu, Tân Định, TP. Hồ Chí Minh, Việt Nam',
-    footerEmail: '✉️ <strong>Email điều hành</strong>: <a href="mailto:Bel@pullmanconnect.com" style="color:#ffffff; text-decoration: underline;">Bel@pullmanconnect.com (Ms Linh)</a>',
-    footerPhone: '📞 <strong>Hotline</strong>: <a href="tel:0916712502" style="color:#ffffff; text-decoration: underline;">0916712502 (Ms Linh)</a> | <a href="tel:0942512234" style="color:#ffffff; text-decoration: underline;">0942512234 (Mr Cường)</a> (Email: <a href="mailto:admin@pullmanconnect.onmicrosoft.com" style="color:#ffffff; text-decoration: underline;">admin@pullmanconnect.onmicrosoft.com</a>) | 📠 <strong>Fax</strong>: (Đang cập nhật)',
+    footerEmail: '✉️ <strong>Email điều hành</strong>: <a href="mailto:Bel@pullmanconnect.com" style="color:#ffffff; text-decoration: underline;">Bel@pullmanconnect.com</a>',
+    footerPhone: '📞 <strong>Hotline</strong>: <a href="tel:0916712502" style="color:#ffffff; text-decoration: underline;">0916712502 (Ms Linh)</a> | <a href="tel:0942512234" style="color:#ffffff; text-decoration: underline;">0942512234 (Mr Cường)</a>',
+    footerLinh: '👩‍💼 <strong>Ms Linh</strong>: 📞 <a href="tel:0916712502" style="color:#ffffff; text-decoration: underline;">0916712502</a> - ✉️ <a href="mailto:Bel@pullmanconnect.com" style="color:#ffffff; text-decoration: underline;">Bel@pullmanconnect.com</a>',
+    footerCuong: '👨‍💼 <strong>Mr Cường</strong>: 📞 <a href="tel:0942512234" style="color:#ffffff; text-decoration: underline;">0942512234</a> - ✉️ <a href="mailto:admin@pullmanconnect.onmicrosoft.com" style="color:#ffffff; text-decoration: underline;">admin@pullmanconnect.onmicrosoft.com</a>',
+    footerFax: '📠 <strong>Fax</strong>: (Đang cập nhật)',
     footerAssociation: 'Hội viên chính thức của Hiệp hội Doanh nghiệp Dịch vụ Logistics Việt Nam (VLA), IATA, FIATA, WCA ID: #88241.',
     footerMoit: '✓ ĐÃ THÔNG BÁO BỘ CÔNG THƯƠNG',
 
     // Floating Widget & Toast
     floatZaloLinh: 'Chat Zalo (Ms Linh)',
+    floatHotlineLinh: 'Ms Linh: 0916712502 - Bel@pullmanconnect.com',
+    floatZaloCuong: 'Chat Zalo (Mr Cường)',
+    floatHotlineCuong: 'Mr Cường: 0942512234 - admin@pullmanconnect.onmicrosoft.com',
+    floatLinhEmail: 'Email Ms Linh: Bel@pullmanconnect.com',
+    floatCuongEmail: 'Email Mr Cường: admin@pullmanconnect.onmicrosoft.com',
     floatZalo: 'Chat Zalo (Mr Cường)',
     floatHotline: 'Hotline: 0916712502 (Ms Linh) - 0942512234 (Mr Cường)',
-    floatLinhEmail: 'Email Ms Linh',
-    floatCuongEmail: 'Email Mr Cường',
     floatWhatsapp: 'WhatsApp (Quốc Tế)',
     floatEmailQuote: 'Báo Giá Nhanh (Email)',
     toastLangSwitched: 'Đã chuyển sang ngôn ngữ: Tiếng Việt'
@@ -180,8 +188,9 @@ const I18N_DICTIONARY = {
 
   en: {
     label: 'English',
-    // Header & Nav
-    hotline: 'HOTLINE: (+84) 916712502 (Ms Linh) - (+84) 942512234 (Mr Cuong)',
+    hotline: 'Ms Linh: (+84) 916712502 | Mr Cuong: (+84) 942512234',
+    hotlineLinh: 'Ms Linh: <a href="tel:0916712502">(+84) 916712502</a> - <a href="mailto:Bel@pullmanconnect.com">Bel@pullmanconnect.com</a>',
+    hotlineCuong: 'Mr Cuong: <a href="tel:0942512234">(+84) 942512234</a> - <a href="mailto:admin@pullmanconnect.onmicrosoft.com">admin@pullmanconnect.onmicrosoft.com</a>',
     navHome: '🏠 HOME',
     navAbout: 'ABOUT US ▾',
     navAboutIntro: 'About Pullman Connect',
@@ -333,17 +342,23 @@ const I18N_DICTIONARY = {
     // Footer
     footerCopyright: 'Copyright © 2026 <strong>PULLMAN CONNECT CORPORATION.</strong> All rights reserved.',
     footerHeadOffice: '🏠 <strong>HEAD OFFICE</strong>: 152 Nguyen Van Dau, Tan Dinh, Ho Chi Minh City, Vietnam',
-    footerEmail: '✉️ <strong>Operations Email</strong>: <a href="mailto:Bel@pullmanconnect.com" style="color:#ffffff; text-decoration: underline;">Bel@pullmanconnect.com (Ms Linh)</a>',
-    footerPhone: '📞 <strong>Hotline</strong>: <a href="tel:0916712502" style="color:#ffffff; text-decoration: underline;">(+84) 916712502 (Ms Linh)</a> | <a href="tel:0942512234" style="color:#ffffff; text-decoration: underline;">(+84) 942512234 (Mr Cuong)</a> (Email: <a href="mailto:admin@pullmanconnect.onmicrosoft.com" style="color:#ffffff; text-decoration: underline;">admin@pullmanconnect.onmicrosoft.com</a>) | 📠 <strong>Fax</strong>: (Updating)',
+    footerEmail: '✉️ <strong>Operations Email</strong>: <a href="mailto:Bel@pullmanconnect.com" style="color:#ffffff; text-decoration: underline;">Bel@pullmanconnect.com</a>',
+    footerPhone: '📞 <strong>Hotline</strong>: <a href="tel:0916712502" style="color:#ffffff; text-decoration: underline;">(+84) 916712502 (Ms Linh)</a> | <a href="tel:0942512234" style="color:#ffffff; text-decoration: underline;">(+84) 942512234 (Mr Cuong)</a>',
+    footerLinh: '👩‍💼 <strong>Ms Linh</strong>: 📞 <a href="tel:0916712502" style="color:#ffffff; text-decoration: underline;">(+84) 916712502</a> - ✉️ <a href="mailto:Bel@pullmanconnect.com" style="color:#ffffff; text-decoration: underline;">Bel@pullmanconnect.com</a>',
+    footerCuong: '👨‍💼 <strong>Mr Cuong</strong>: 📞 <a href="tel:0942512234" style="color:#ffffff; text-decoration: underline;">(+84) 942512234</a> - ✉️ <a href="mailto:admin@pullmanconnect.onmicrosoft.com" style="color:#ffffff; text-decoration: underline;">admin@pullmanconnect.onmicrosoft.com</a>',
+    footerFax: '📠 <strong>Fax</strong>: (Updating)',
     footerAssociation: 'Official Member of Vietnam Logistics Association (VLA), IATA, FIATA, WCA ID: #88241.',
     footerMoit: '✓ REGISTERED WITH MINISTRY OF INDUSTRY AND TRADE',
 
     // Floating Widget & Toast
     floatZaloLinh: 'Chat Zalo (Ms Linh)',
+    floatHotlineLinh: 'Ms Linh: (+84) 916712502 - Bel@pullmanconnect.com',
+    floatZaloCuong: 'Chat Zalo (Mr Cuong)',
+    floatHotlineCuong: 'Mr Cuong: (+84) 942512234 - admin@pullmanconnect.onmicrosoft.com',
+    floatLinhEmail: 'Email Ms Linh: Bel@pullmanconnect.com',
+    floatCuongEmail: 'Email Mr Cuong: admin@pullmanconnect.onmicrosoft.com',
     floatZalo: 'Chat Zalo (Mr Cuong)',
     floatHotline: 'Hotline: (+84) 916712502 (Ms Linh) - (+84) 942512234 (Mr Cuong)',
-    floatLinhEmail: 'Email Ms Linh',
-    floatCuongEmail: 'Email Mr Cuong',
     floatWhatsapp: 'WhatsApp (Global)',
     floatEmailQuote: 'Instant Quote (Email)',
     toastLangSwitched: 'Switched language to: English'
@@ -351,8 +366,9 @@ const I18N_DICTIONARY = {
 
   cn: {
     label: '中文',
-    // Header & Nav
-    hotline: '服务热线: 0916712502 (Ms Linh) - 0942512234 (Mr Cường)',
+    hotline: 'Ms Linh: 0916712502 | Mr Cường: 0942512234',
+    hotlineLinh: 'Ms Linh: <a href="tel:0916712502">0916712502</a> - <a href="mailto:Bel@pullmanconnect.com">Bel@pullmanconnect.com</a>',
+    hotlineCuong: 'Mr Cường: <a href="tel:0942512234">0942512234</a> - <a href="mailto:admin@pullmanconnect.onmicrosoft.com">admin@pullmanconnect.onmicrosoft.com</a>',
     navHome: '🏠 首页',
     navAbout: '关于我们 ▾',
     navAboutIntro: '关于 Pullman Connect',
@@ -504,17 +520,23 @@ const I18N_DICTIONARY = {
     // Footer
     footerCopyright: '版权所有 © 2026 <strong>PULLMAN CONNECT CORPORATION.</strong> 保留所有权利。',
     footerHeadOffice: '🏠 <strong>总部地址 (HEAD OFFICE)</strong>: 152 Nguyen Van Dau, Tan Dinh, Ho Chi Minh City, Vietnam',
-    footerEmail: '✉️ <strong>运营邮箱</strong>: <a href="mailto:Bel@pullmanconnect.com" style="color:#ffffff; text-decoration: underline;">Bel@pullmanconnect.com (Ms Linh)</a>',
-    footerPhone: '📞 <strong>服务热线</strong>: <a href="tel:0916712502" style="color:#ffffff; text-decoration: underline;">0916712502 (Ms Linh)</a> | <a href="tel:0942512234" style="color:#ffffff; text-decoration: underline;">0942512234 (Mr Cường)</a> (邮箱: <a href="mailto:admin@pullmanconnect.onmicrosoft.com" style="color:#ffffff; text-decoration: underline;">admin@pullmanconnect.onmicrosoft.com</a>) | 📠 <strong>传真</strong>: (更新中)',
+    footerEmail: '✉️ <strong>运营邮箱</strong>: <a href="mailto:Bel@pullmanconnect.com" style="color:#ffffff; text-decoration: underline;">Bel@pullmanconnect.com</a>',
+    footerPhone: '📞 <strong>服务热线</strong>: <a href="tel:0916712502" style="color:#ffffff; text-decoration: underline;">0916712502 (Ms Linh)</a> | <a href="tel:0942512234" style="color:#ffffff; text-decoration: underline;">0942512234 (Mr Cường)</a>',
+    footerLinh: '👩‍💼 <strong>Ms Linh</strong>: 📞 <a href="tel:0916712502" style="color:#ffffff; text-decoration: underline;">0916712502</a> - ✉️ <a href="mailto:Bel@pullmanconnect.com" style="color:#ffffff; text-decoration: underline;">Bel@pullmanconnect.com</a>',
+    footerCuong: '👨‍💼 <strong>Mr Cường</strong>: 📞 <a href="tel:0942512234" style="color:#ffffff; text-decoration: underline;">0942512234</a> - ✉️ <a href="mailto:admin@pullmanconnect.onmicrosoft.com" style="color:#ffffff; text-decoration: underline;">admin@pullmanconnect.onmicrosoft.com</a>',
+    footerFax: '📠 <strong>传真</strong>: (更新中)',
     footerAssociation: '越南物流企业协会 (VLA), IATA, FIATA, WCA 官方认证会员 ID: #88241。',
     footerMoit: '✓ 已在越南工贸部完成合规备案',
 
     // Floating Widget & Toast
     floatZaloLinh: 'Zalo 在线咨询 (Ms Linh)',
+    floatHotlineLinh: 'Ms Linh: 0916712502 - Bel@pullmanconnect.com',
+    floatZaloCuong: 'Zalo 在线咨询 (Mr Cường)',
+    floatHotlineCuong: 'Mr Cường: 0942512234 - admin@pullmanconnect.onmicrosoft.com',
+    floatLinhEmail: 'Ms Linh 邮箱: Bel@pullmanconnect.com',
+    floatCuongEmail: 'Mr Cường 邮箱: admin@pullmanconnect.onmicrosoft.com',
     floatZalo: 'Zalo 在线咨询 (Mr Cường)',
     floatHotline: '服务热线: 0916712502 (Ms Linh) - 0942512234 (Mr Cường)',
-    floatLinhEmail: 'Ms Linh 邮箱',
-    floatCuongEmail: 'Mr Cường 邮箱',
     floatWhatsapp: 'WhatsApp (国际客服)',
     floatEmailQuote: '快速询价 (邮件)',
     toastLangSwitched: '已切换至语言: 中文 (Chinese)'

@@ -39,9 +39,13 @@ function applyLogisticsConfig() {
     quoteForm.action = `https://formsubmit.co/${LOGISTICS_CONFIG.receiverEmail}`;
   }
 
-  // 2. Cập nhật Link Zalo và WhatsApp trên toàn trang
+  // 2. Cập nhật Link Zalo và WhatsApp trên toàn trang mà không ghi đè lẫn nhau
   document.querySelectorAll('a[href*="zalo.me"]').forEach(el => {
-    if (LOGISTICS_CONFIG.zaloUrl) el.href = LOGISTICS_CONFIG.zaloUrl;
+    if (el.href.includes('0916712502') || (el.title && el.title.toLowerCase().includes('linh')) || el.getAttribute('data-contact') === 'linh') {
+      if (LOGISTICS_CONFIG.zaloLinhUrl) el.href = LOGISTICS_CONFIG.zaloLinhUrl;
+    } else {
+      if (LOGISTICS_CONFIG.zaloUrl) el.href = LOGISTICS_CONFIG.zaloUrl;
+    }
   });
   document.querySelectorAll('a[href*="wa.me"]').forEach(el => {
     if (LOGISTICS_CONFIG.whatsappUrl) el.href = LOGISTICS_CONFIG.whatsappUrl;

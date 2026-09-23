@@ -190,18 +190,41 @@ img {
   gap: 20px;
 }
 
+.bee-hotline-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .bee-hotline-box {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   background: var(--bee-orange-bg);
-  border: 1.5px solid rgba(247, 148, 29, 0.3);
-  padding: 6px 14px;
+  border: 1.5px solid rgba(247, 148, 29, 0.35);
+  padding: 5px 12px;
   border-radius: 6px;
   color: var(--bee-blue-primary);
   font-weight: 700;
-  font-size: 0.88rem;
-  animation: beePulse 2s infinite ease-in-out;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  animation: beePulse 2.5s infinite ease-in-out;
+}
+
+.bee-hotline-box a {
+  color: var(--bee-blue-primary);
+  text-decoration: none;
+}
+
+.bee-hotline-box a:hover {
+  color: var(--bee-orange-primary);
+  text-decoration: underline;
+}
+
+.bee-hotline-box .hotline-sep {
+  color: #94a3b8;
+  margin: 0 3px;
 }
 
 @keyframes beePulse {
@@ -905,6 +928,30 @@ img {
   color: #ffffff;
 }
 
+.bee-footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.bee-footer-contact-item {
+  color: #e2e8f0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.bee-footer-contact-item a {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.bee-footer-contact-item a:hover {
+  color: var(--bee-orange-primary);
+}
+
 .bee-footer-badges {
   text-align: right;
 }
@@ -1135,6 +1182,7 @@ img {
   .bee-slide-right { height: 240px; }
   .bee-stats-grid { grid-template-columns: repeat(2, 1fr); }
   .bee-footer-row { grid-template-columns: 1fr; }
+  .bee-hotline-group { justify-content: center; }
 }
 
 @media (max-width: 768px) {
@@ -1142,4 +1190,32 @@ img {
   .bee-nav-list { display: none; }
   .bee-stats-grid { grid-template-columns: 1fr; }
   .pillar-card-header { flex-direction: column; align-items: flex-start; }
+  .bee-top-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .bee-top-tools {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+  .bee-hotline-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+  .bee-hotline-box {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    font-size: 0.78rem;
+  }
+  .bee-footer-badges {
+    text-align: left;
+  }
+  .bee-footer-badges div {
+    justify-content: flex-start !important;
+  }
 }
