@@ -95,179 +95,122 @@ img {
 }
 
 /* ==========================================================================
-   1. TOP HEADER (Bee Logistics Header with Logo & Hotline Banner)
+   1. TOP BAR (Thanh Tiện Ích: Liên Hệ Chuyên Viên, Mạng Xã Hội & Đa Ngôn Ngữ)
    ========================================================================== */
-.bee-top-header {
-  background: #ffffff;
-  padding: 16px 0 14px;
-  border-bottom: 1px solid #eef2f6;
+.bee-top-bar {
+  background: #002244;
+  color: #cbd5e1;
+  font-size: 0.78rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 1001;
 }
 
-.bee-top-row {
+.bee-top-bar-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  min-height: 34px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  gap: 15px;
 }
 
-.bee-logo-brand {
+.bee-top-contact-group {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-wrap: nowrap;
 }
 
-.bee-official-logo-img {
-  height: 68px;
-  width: auto;
-  max-width: 290px;
-  object-fit: contain;
-  display: block;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  transition: transform 0.25s ease;
-}
-
-.bee-logo-brand:hover .bee-official-logo-img {
-  transform: scale(1.03);
-}
-
-.bee-footer-logo-img {
-  height: 56px;
-  width: auto;
-  max-width: 260px;
-  object-fit: contain;
-  display: block;
-}
-
-.bee-logo-badge {
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
-  background: var(--bee-blue-primary);
-  display: flex;
+.bee-top-contact-item {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 5px;
+  color: #e2e8f0;
+  font-weight: 500;
+  white-space: nowrap;
+  font-size: 0.78rem;
+}
+
+.bee-top-contact-item svg {
   color: var(--bee-orange-primary);
-  box-shadow: 0 4px 10px rgba(0, 51, 102, 0.25);
+  flex-shrink: 0;
 }
 
-.bee-logo-badge svg {
-  width: 28px;
-  height: 28px;
-}
-
-.bee-logo-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.bee-logo-title {
-  font-family: var(--font-condensed);
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--bee-blue-primary);
-  line-height: 1;
-  letter-spacing: -0.02em;
-}
-
-.bee-logo-title span {
-  color: var(--bee-orange-primary);
-}
-
-.bee-logo-subtitle {
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: var(--bee-blue-medium);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  margin-top: 3px;
-}
-
-.bee-top-tools {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.bee-hotline-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.bee-hotline-box {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--bee-orange-bg);
-  border: 1.5px solid rgba(247, 148, 29, 0.35);
-  padding: 5px 12px;
-  border-radius: 6px;
-  color: var(--bee-blue-primary);
-  font-weight: 700;
-  font-size: 0.82rem;
-  line-height: 1.35;
-  animation: beePulse 2.5s infinite ease-in-out;
-}
-
-.bee-hotline-box a {
-  color: var(--bee-blue-primary);
+.bee-top-contact-item a {
+  color: #ffffff;
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
-.bee-hotline-box a:hover {
+.bee-top-contact-item a:hover {
   color: var(--bee-orange-primary);
   text-decoration: underline;
 }
 
-.bee-hotline-box .hotline-sep {
-  color: #94a3b8;
-  margin: 0 3px;
+.bee-top-contact-item .hotline-sep {
+  color: #64748b;
+  margin: 0 4px;
 }
 
-@keyframes beePulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.02); }
+.bee-top-sep {
+  color: #475569;
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+.bee-top-tools-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .bee-social-strip {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .bee-social-strip a {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   border-radius: 4px;
-  background: #f1f5f9;
+  background: rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--bee-blue-primary);
-  font-size: 0.9rem;
+  color: #ffffff;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
 }
 
 .bee-social-strip a:hover {
   background: var(--bee-orange-primary);
   color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .bee-lang-menu-box {
   position: relative;
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 3px 8px;
   border-radius: 4px;
-  background: #f8fafc;
-  border: 1px solid var(--bee-border);
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--bee-blue-primary);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #ffffff;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
+  transition: background 0.2s ease;
+}
+
+.bee-lang-menu-box:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .bee-lang-dropdown-list {
@@ -310,23 +253,68 @@ img {
 }
 
 /* ==========================================================================
-   2. NAVBAR (Bee Logistics Style Grey-White Bar with Core Service Dropdown)
+   2. MAIN HEADER & NAVBAR (Logo + Menu + Button Gọn Gàng, Sticky)
    ========================================================================== */
-.bee-navbar {
-  background: #f8f9fa;
-  border-top: 1px solid #e9ecef;
+.bee-main-header {
+  background: #ffffff;
   border-bottom: 2px solid var(--bee-orange-primary);
+  box-shadow: 0 2px 8px rgba(0, 34, 68, 0.06);
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.bee-main-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 58px;
+  gap: 15px;
+}
+
+.bee-logo-brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.bee-official-logo-img {
+  height: 48px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transition: transform 0.25s ease;
+}
+
+.bee-logo-brand:hover .bee-official-logo-img {
+  transform: scale(1.02);
+}
+
+.bee-footer-logo-img {
+  height: 56px;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
+  display: block;
+}
+
+.bee-navbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
 }
 
 .bee-nav-list {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   list-style: none;
+  gap: 1px;
+  margin: 0;
+  padding: 0;
 }
 
 .bee-nav-item {
@@ -337,13 +325,15 @@ img {
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 12px 14px;
-  font-size: 0.86rem;
+  padding: 8px 10px;
+  font-size: 0.81rem;
   font-weight: 700;
-  color: #333333;
+  color: var(--bee-blue-primary);
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   transition: all 0.2s ease;
+  border-radius: 4px;
+  white-space: nowrap;
 }
 
 .bee-nav-link:hover, .bee-nav-item.active .bee-nav-link {
@@ -355,7 +345,7 @@ img {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 290px;
+  min-width: 280px;
   background: #ffffff;
   border-top: 3px solid var(--bee-orange-primary);
   box-shadow: var(--shadow-lg);
@@ -376,7 +366,7 @@ img {
 .bee-dropdown-link {
   display: block;
   padding: 8px 16px;
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   color: #444444;
   border-bottom: 1px dashed #f0f0f0;
   transition: all 0.2s ease;
@@ -389,23 +379,27 @@ img {
 }
 
 .bee-quote-nav-btn {
-  margin-left: auto;
   background: var(--bee-orange-gradient);
   color: #ffffff !important;
   font-weight: 800;
-  padding: 8px 18px;
-  border-radius: 4px;
-  font-size: 0.84rem;
+  padding: 7px 14px;
+  border-radius: 5px;
+  font-size: 0.78rem;
   text-transform: uppercase;
-  box-shadow: 0 4px 12px rgba(247, 148, 29, 0.35);
+  letter-spacing: 0.02em;
+  box-shadow: 0 3px 8px rgba(247, 148, 29, 0.3);
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
 }
 
 .bee-quote-nav-btn:hover {
   background: linear-gradient(135deg, #e67e00 0%, #d35400 100%);
-  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(247, 148, 29, 0.4);
 }
 
 /* ==========================================================================
@@ -1173,6 +1167,22 @@ img {
 
 /* Responsive */
 @media (max-width: 992px) {
+  .bee-top-bar-inner {
+    flex-direction: column;
+    padding: 6px 0;
+    gap: 4px;
+    text-align: center;
+  }
+  .bee-top-contact-group {
+    flex-direction: column;
+    gap: 3px;
+  }
+  .bee-top-sep {
+    display: none;
+  }
+  .bee-top-tools-right {
+    display: none;
+  }
   .bee-slide-container {
     grid-template-columns: 1fr;
     text-align: center;
@@ -1182,36 +1192,24 @@ img {
   .bee-slide-right { height: 240px; }
   .bee-stats-grid { grid-template-columns: repeat(2, 1fr); }
   .bee-footer-row { grid-template-columns: 1fr; }
-  .bee-hotline-group { justify-content: center; }
+  .bee-nav-list { display: none; }
 }
 
 @media (max-width: 768px) {
+  .bee-top-bar {
+    display: none;
+  }
+  .bee-official-logo-img {
+    height: 38px;
+    max-width: 170px;
+  }
+  .bee-quote-nav-btn {
+    padding: 6px 10px;
+    font-size: 0.72rem;
+  }
   .bee-slider-viewport { height: auto; min-height: 440px; }
-  .bee-nav-list { display: none; }
   .bee-stats-grid { grid-template-columns: 1fr; }
   .pillar-card-header { flex-direction: column; align-items: flex-start; }
-  .bee-top-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-  .bee-top-tools {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    gap: 10px;
-  }
-  .bee-hotline-group {
-    flex-direction: column;
-    width: 100%;
-    gap: 8px;
-  }
-  .bee-hotline-box {
-    justify-content: center;
-    width: 100%;
-    text-align: center;
-    font-size: 0.78rem;
-  }
   .bee-footer-badges {
     text-align: left;
   }
